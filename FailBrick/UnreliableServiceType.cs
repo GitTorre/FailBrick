@@ -31,7 +31,7 @@ namespace FailBrick
 
         private void ConfigHandler_Changed(object sender, EventArgs e)
         {
-            Enum.TryParse<CrashMode>(this.configHandler["Mode"], out this.crashMode);
+            Enum.TryParse(this.configHandler["Mode"], out this.crashMode);
         }
 
         protected override Task OnOpenAsync(ReplicaOpenMode openMode, CancellationToken cancellationToken)
@@ -41,7 +41,7 @@ namespace FailBrick
                 throw new Exception("crash in replica open");
             }
 
-            return Task.FromResult<bool>(true);
+            return Task.FromResult(true);
         }
         
         protected override IEnumerable<ServiceReplicaListener> CreateServiceReplicaListeners()
@@ -111,7 +111,7 @@ namespace FailBrick
                 throw new Exception("crash in replica open");
             }
 
-            return Task.FromResult<bool>(true);
+            return Task.FromResult(true);
         }
     }
 }

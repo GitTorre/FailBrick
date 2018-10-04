@@ -21,7 +21,7 @@ namespace FailBrick
 
                 var crashmode = configHandler["Mode"];
 
-                Enum.TryParse<CrashMode>(crashmode, out runningCrashMode);
+                Enum.TryParse(crashmode, out runningCrashMode);
 
                 if (runningCrashMode == CrashMode.CrashBeforeRegistration)
                 {

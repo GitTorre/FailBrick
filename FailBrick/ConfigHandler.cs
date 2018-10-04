@@ -17,7 +17,7 @@ namespace FailBrick
 
             if (activationcontext.GetConfigurationPackageNames().Contains("Config"))
             {
-                ConfigurationPackage configPackage = activationcontext.GetConfigurationPackageObject("Config");
+                var configPackage = activationcontext.GetConfigurationPackageObject("Config");
 
                 this.UpdateConfigSettings(configPackage.Settings);
 
