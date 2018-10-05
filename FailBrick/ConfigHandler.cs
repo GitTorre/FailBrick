@@ -58,7 +58,5 @@ namespace FailBrick
         {
             Changed?.Invoke(this, e);
         }
-
-
     }
 }
